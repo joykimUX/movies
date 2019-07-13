@@ -1,0 +1,19 @@
+<div class="grid-container">
+  <h1 class="mat-h1" style="color:red; text-align: center">NEW MOVIES</h1>
+  <mat-grid-list cols="3" rowHeight="400px">
+    <mat-grid-tile
+        *ngFor="let movie of movies"
+        [colspan]="movie.cols"
+        [rowspan]="movie.rows">
+      <img src="assets/movie/{{movie.name}}.jpeg" layout-fill/>
+
+      <mat-grid-tile-footer>
+        <h3 mat-line>{{movie.name}}</h3>
+        <span mat-line>{{movie.release}}</span>
+          <button mat-icon-button aria-label="info icon">
+            <mat-icon>info</mat-icon>
+          </button>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
