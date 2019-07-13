@@ -9,6 +9,8 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent},
   {path:'fantasy', component:FantasyComponent},
   {path:'romance', component:RomanceComponent},
+  { path: '', pathMatch:'full', redirectTo: 'dashboard' },
+  { path: '**', redirectTo: 'dashboard'}
 ];
 
 @NgModule({
